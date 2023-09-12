@@ -10,7 +10,10 @@ pipeline {
             }
         }
         stage('Load Pipeline') {
-            code = load 'generated.groovy'
+            steps {
+                load 'generated.groovy'
+            }
+            
         }
     }
 }
