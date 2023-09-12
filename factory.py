@@ -3,7 +3,7 @@ stage('%s') {
     agent {
         docker { image 'alpine' }
     }
-    steps {
+    step {
         sh 'I am %s'
     }
 }
