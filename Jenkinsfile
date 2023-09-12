@@ -10,8 +10,8 @@ pipeline {
             }
         }
         stage('Load Pipeline') {
-            node {
-                steps {
+            steps {
+                node {
                     load 'generated.groovy'
                 }
             }
