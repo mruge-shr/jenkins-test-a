@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Load Pipeline') {
             steps {
-                node {
+                node('master') {
                     load 'generated.groovy'
                 }
             }
