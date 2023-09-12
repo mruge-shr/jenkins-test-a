@@ -1,14 +1,11 @@
 template = """
-pipeline {
-    agent none    
-    stages {
-        stage('%s') {
-            agent {
-                docker { image 'alpine' }
-            }
-            steps {
-                sh 'I am %s'
-            }
+stages {
+    stage('%s') {
+        agent {
+            docker { image 'alpine' }
+        }
+        steps {
+            sh 'I am %s'
         }
     }
 }
