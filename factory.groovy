@@ -12,7 +12,10 @@ pipeline {
         stage('Execute'){
             steps {
                 script {
-                    load 'fullpipeline.groovy'
+                    node{
+                        load 'fullpipeline.groovy'
+                    }
+                    
                 }
             }
             
