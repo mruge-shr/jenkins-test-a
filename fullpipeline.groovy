@@ -5,7 +5,7 @@
 
 //     stages {
 
-    def call(){}
+    def call(){
         stage('Post'){
             agent {
                 docker { image 'alpine' }
