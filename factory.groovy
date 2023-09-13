@@ -9,13 +9,16 @@ pipeline {
                 echo 'Planning'
             }
         }
-        // stage('Execute'){
-        steps {
-            script {
+        stage('Execute'){
+            stages {
                 def pl = load 'fullpipeline.groovy'
                 pl.call()
             }
+            // steps {
+            //     script {
+                    
+            //     }
+            // }
         }
-        // }
     }
 }
