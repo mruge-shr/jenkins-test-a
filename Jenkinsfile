@@ -46,4 +46,5 @@ def direct(){
             sh 'cat /etc/os-release'
         }
     }
+    return
 }
