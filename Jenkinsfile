@@ -1,6 +1,6 @@
 def code
 
-node('java-agent') {
+node('docker') {
   stage('Checkout') {
     checkout scm
   }
