@@ -1,10 +1,12 @@
 template = """
-stage('%s') {
-    agent {
-        docker { image 'alpine' }
-    }
-    step {
-        sh 'I am %s'
+node('docker') {
+    stage('%s') {
+        agent {
+            docker { image 'alpine' }
+        }
+        step {
+            sh 'I am %s'
+        }
     }
 }
 """
