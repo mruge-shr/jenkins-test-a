@@ -1,4 +1,4 @@
-node {
+// node {
     checkout scm 
     pipeline {
         agent none 
@@ -7,4 +7,4 @@ node {
             load 'fullpipeline.groovy'
         }
     }
-}
+// }
