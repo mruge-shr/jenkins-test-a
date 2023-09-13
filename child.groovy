@@ -1,9 +1,9 @@
-def exec() {
-    agent {
-        docker { image 'python:3' }
-    }
-    steps {
-        sh 'python -V'
-    }
+def example1() {
+  println 'Hello from example1'
 }
+
+def example2() {
+  println 'Hello from example2'
+}
+
 return this
