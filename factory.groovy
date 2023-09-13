@@ -12,7 +12,6 @@ pipeline {
         }
         stage('Execute'){
             agent none
-            
             steps {
                 script {
                     def pl = load 'fullpipeline.groovy'
@@ -21,5 +20,4 @@ pipeline {
             }
         }
     }
-
 }

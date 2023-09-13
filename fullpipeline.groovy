@@ -1,10 +1,5 @@
 #!groovy
 
-// pipeline {
-//     agent none
-
-//     stages {
-
 def call(){
     stage('Post'){
         agent {
@@ -20,5 +15,3 @@ def call(){
     }
 }
 return this
-//     }
-// }
