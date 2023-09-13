@@ -11,6 +11,7 @@ pipeline {
             }
         }
         stage('Execute'){
+            agent none
             
             steps {
                 script {
