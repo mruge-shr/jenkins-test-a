@@ -16,5 +16,7 @@
 
 // code.example2()
 
-checkout scm 
-load 'fullpipeline.groovy'
+node{
+    checkout scm 
+    load 'fullpipeline.groovy'
+}
