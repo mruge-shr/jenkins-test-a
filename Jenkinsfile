@@ -24,18 +24,15 @@ def getStages() {
     stages = [:]
     stages["Step2.1"] = { 
         stage('2.1') {
-            sh """
-            echo hi 2.1
-            """
+            agent {
+                docker { image 'alpine' }
+            }
+            step {
+                sh 'cat /etc/os-release'
+            }
         } 
     }
-    stages["Step2.p"] = { 
-        stage('2.p') {
-            sh """
-            echo hi 2.p
-            """
-        } 
-    }
+    
     
     return stages
 }
