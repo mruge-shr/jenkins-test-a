@@ -6,3 +6,4 @@ def exec() {
         sh 'python -V'
     }
 }
+return this
