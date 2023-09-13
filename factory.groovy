@@ -10,6 +10,13 @@ pipeline {
                 echo 'Planning'
             }
         }
+        stage('Execute'){
+            steps{
+                script{
+                    fullpipeline.call()
+                }
+            }
+        }
     }
 
 }

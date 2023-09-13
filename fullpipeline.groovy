@@ -1,7 +1,11 @@
-pipeline {
-    agent none
+#!groovy
 
-    stages {
+// pipeline {
+//     agent none
+
+//     stages {
+
+    def call(){}
         stage('Post'){
             agent {
                 docker { image 'alpine' }
@@ -11,4 +15,5 @@ pipeline {
             }
         }
     }
-}
+//     }
+// }
