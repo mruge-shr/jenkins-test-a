@@ -12,9 +12,12 @@ pipeline {
         stage('Execute'){
             steps {
                 script {
-                    node{
-                        load 'fullpipeline.groovy'
+                    docker.image('cirros'){
+                        sh 'cat /etc/os-release'
                     }
+                    // node{
+                    //     load 'fullpipeline.groovy'
+                    // }
                     
                 }
             }
