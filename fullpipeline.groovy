@@ -11,7 +11,7 @@ def call(){
             docker { image 'alpine' }
         }
         steps {
-            echo 'Executing'
+            sh 'echo Executing'
         }
     }
 }
