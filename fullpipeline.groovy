@@ -10,9 +10,7 @@ def call(){
         agent {
             docker { image 'alpine' }
         }
-        steps {
-            sh 'echo Executing'
-        }
+        sh 'echo Executing'
     }
 }
 return this
