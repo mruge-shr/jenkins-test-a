@@ -10,7 +10,13 @@ def call(){
         agent {
             docker { image 'alpine' }
         }
-        sh 'echo Executing'
+        sh 'cat /etc/os-release'
+    }
+    stage('Post2'){
+        agent {
+            docker { image 'cirros' }
+        }
+        sh 'cat /etc/os-release'
     }
 }
 return this
