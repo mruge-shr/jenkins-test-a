@@ -1,5 +1,10 @@
 node {
     checkout scm 
-    load 'factory.groovy'
-    load 'fullpipeline.groovy'
+    pipeline {
+        agent none 
+        stages {
+            load 'factory.groovy'
+            load 'fullpipeline.groovy'
+        }
+    }
 }

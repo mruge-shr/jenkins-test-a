@@ -1,8 +1,8 @@
-println 'Start Full Pipeline'
-pipeline {
-    agent none
+// println 'Start Full Pipeline'
+// pipeline {
+//     agent none
 
-    stages {
+    // stages {
         stage('inContainerStage'){
             agent {
                 docker { image 'alpine' }
@@ -11,7 +11,7 @@ pipeline {
                 echo 'In a Container!!!'
             }
         }
-    }
+    // }
 
-}
-println 'End Full Pipeline'
+// }
+// println 'End Full Pipeline'
