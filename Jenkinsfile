@@ -1,17 +1,17 @@
-// def code
+def code
 
-// node('docker') {
+node('docker') {
 //   stage('Checkout') {
 //     checkout scm
 //   }
 
-//   stage('Load') {
-//     code = load 'child.groovy'
-//   }
+  stage('Load') {
+    code = load 'child.groovy'
+  }
 
-//   stage('Execute') {
-//     code.example1()
-//   }
-// }
+  stage('Execute') {
+    code.example1()
+  }
+}
 
 // code.example2()
