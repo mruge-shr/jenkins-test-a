@@ -1,5 +1,7 @@
 println 'Start Full Pipeline'
 pipeline {
+    agent none
+
     stages {
         stage('inContainerStage'){
             agent {
