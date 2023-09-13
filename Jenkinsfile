@@ -6,7 +6,7 @@ node('docker') {
   }
 
   stage('Load') {
-    code = load 'example.groovy'
+    code = load 'child.groovy'
   }
 
   stage('Execute') {
