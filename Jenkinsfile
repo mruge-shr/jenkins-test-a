@@ -12,7 +12,7 @@ pipeline {
         stage('2'){
             steps {
                 script {
-                    parallel getStages()
+                    parallel direct()
                 }
             }
             
@@ -35,4 +35,15 @@ def getStages() {
     
     
     return stages
+}
+
+def direct(){
+    stage('3') {
+        agent {
+            docker { image 'alpine' }
+        }
+        steps {
+            sh 'cat /etc/os-release'
+        }
+    }
 }
