@@ -42,7 +42,7 @@ def direct(){
         agent {
             docker { image 'alpine' }
         }
-        steps {
+        step {
             sh 'cat /etc/os-release'
         }
     }
