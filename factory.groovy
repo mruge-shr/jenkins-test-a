@@ -9,9 +9,13 @@ pipeline {
                 echo 'Planning'
             }
         }
-        stage('Execute'){
-            def pl = load 'fullpipeline.groovy'
-            pl.call()
+        // stage('Execute'){
+        steps {
+            script {
+                def pl = load 'fullpipeline.groovy'
+                pl.call()
+            }
         }
+        // }
     }
 }
