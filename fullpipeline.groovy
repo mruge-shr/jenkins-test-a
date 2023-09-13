@@ -2,16 +2,14 @@
 
 def call(){
     stage('Post'){
-        agent {
-            docker { image 'ubuntu' }
+        docker.image('ubuntu'){
+            sh 'cat /etc/os-release'
         }
-        sh 'cat /etc/os-release'
     }
     stage('Post2'){
-        agent {
-            docker { image 'centos' }
+        docker.image('cirros'){
+            sh 'cat /etc/os-release'
         }
-        sh 'cat /etc/os-release'
     }
 }
 return this
