@@ -10,13 +10,8 @@ pipeline {
             }
         }
         stage('Execute'){
-            steps {
-                script {
-                    agent none
-                    def pl = load 'fullpipeline.groovy'
-                    pl.call()
-                }
-            }
+            def pl = load 'fullpipeline.groovy'
+            pl.call()
         }
     }
 }
