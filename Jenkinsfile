@@ -1,4 +1,4 @@
-def jobs = ["Executor1", "Executor2", "Executor3"]
+def jobs = ["Executor1"]
 
 def parallelStagesMap = jobs.collectEntries {
     ["${it}" : generateStage(it)]
@@ -7,7 +7,10 @@ def parallelStagesMap = jobs.collectEntries {
 def generateStage(job) {
     return {
         stage("${job}") {
-                echo "Running stage ${job}."
+                agent {
+                    docker { image 'cirros'}
+                }
+                sh 'cat /etc/os-release'
         }
     }
 }
