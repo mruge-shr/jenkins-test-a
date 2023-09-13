@@ -5,15 +5,16 @@
 
 //     stages {
 
-    def call(){
-        stage('Post'){
-            agent {
-                docker { image 'alpine' }
-            }
-            steps {
-                echo 'Executing'
-            }
+def call(){
+    stage('Post'){
+        agent {
+            docker { image 'alpine' }
+        }
+        steps {
+            echo 'Executing'
         }
     }
+}
+return this
 //     }
 // }
