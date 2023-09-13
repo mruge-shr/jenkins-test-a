@@ -1,5 +1,20 @@
+def jobs = ["Executor1", "Executor2", "Executor3"]
+
+def parallelStagesMap = jobs.collectEntries {
+    ["${it}" : generateStage(it)]
+}
+ 
+def generateStage(job) {
+    return {
+        stage("${job}") {
+                echo "Running stage ${job}."
+        }
+    }
+}
+
+
 pipeline {
-    agent none 
+    agent any 
 
     stages {
         stage('1'){
@@ -11,14 +26,10 @@ pipeline {
             }
         }
         stage('2'){
-            agent any
             steps {
                 script {
-                    docker.image('ubuntu'){
-                        sh 'cat /etc/os-release'
-                    }
+                    parallel parallelStagesMap
                 }
-                // sh 'cat /etc/os-release'
             }
         }
             
