@@ -10,6 +10,7 @@ def example1() {
         }
     }
   }
+  println 'Goodbye from example1'
 }
 
 def example2() {
