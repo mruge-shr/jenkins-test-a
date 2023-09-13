@@ -1,7 +1,6 @@
 #!groovy
 
 def call(){
-    agent none
     stage('Post'){
         agent {
             docker { image 'ubuntu' }
