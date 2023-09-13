@@ -4,8 +4,10 @@ node('docker'){
         agent {
             docker { image 'alpine' }
         }
-        steps {
+        step {
             sh 'pwd'
+        }
+        step {
             sh 'ls -l'
         }
     }
