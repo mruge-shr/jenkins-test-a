@@ -1,7 +1,6 @@
 #!groovy
 
-@NonCPS
-def call(){
+// def call(){
     stage('Post'){
         docker.image('ubuntu'){
             sh 'cat /etc/os-release'
@@ -12,5 +11,5 @@ def call(){
             sh 'cat /etc/os-release'
         }
     }
-}
-return this
+// }
+// return this

@@ -12,8 +12,7 @@ pipeline {
         stage('Execute'){
             steps {
                 script {
-                    def pl = load 'fullpipeline.groovy'
-                    pl.call()
+                    load 'fullpipeline.groovy'
                 }
             }
             
