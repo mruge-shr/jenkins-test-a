@@ -10,9 +10,9 @@ pipeline {
             }
         }
         stage('Execute'){
-            agent none
             steps {
                 script {
+                    agent none
                     def pl = load 'fullpipeline.groovy'
                     pl.call()
                 }
