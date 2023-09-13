@@ -2,9 +2,9 @@
     checkout scm 
     pipeline {
         agent none 
-        stages {
+        // stages {
             load 'factory.groovy'
             load 'fullpipeline.groovy'
-        }
+        // }
     }
 // }
