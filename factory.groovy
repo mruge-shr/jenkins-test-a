@@ -1,7 +1,7 @@
-pipeline {
-    agent none
+// pipeline {
+//     agent none
 
-    stages {
+//     stages {
         stage('inContainerStage'){
             agent {
                 docker { image 'alpine' }
@@ -10,6 +10,6 @@ pipeline {
                 echo 'Doing work'
             }
         }
-    }
+//     }
 
-}
+// }
