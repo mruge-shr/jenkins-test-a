@@ -11,11 +11,14 @@ pipeline {
             }
         }
         stage('2'){
-            agent {
-                docker { image 'ubuntu' }
-            }
+            agent any
             steps {
-                sh 'cat /etc/os-release'
+                script {
+                    docker.image('ubuntu'){
+                        sh 'cat /etc/os-release'
+                    }
+                }
+                // sh 'cat /etc/os-release'
             }
         }
             
