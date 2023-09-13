@@ -1,15 +1,15 @@
-// pipeline {
-//     agent none
+pipeline {
+    agent none
 
-//     stages {
-        stage('inContainerStage'){
+    stages {
+        stage('Pre'){
             agent {
                 docker { image 'alpine' }
             }
             steps {
-                echo 'Doing work'
+                echo 'Planning'
             }
         }
-//     }
+    }
 
-// }
+}
