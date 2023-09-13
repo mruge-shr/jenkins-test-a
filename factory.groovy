@@ -10,10 +10,13 @@ pipeline {
             }
         }
         stage('Execute'){
-            node {
-                def pl = load 'fullpipeline.groovy'
-                pl.call()
+            steps {
+                node {
+                    def pl = load 'fullpipeline.groovy'
+                    pl.call()
+                }
             }
+            
 
             // steps {
             //     script {
