@@ -1,5 +1,6 @@
 #!groovy
 
+@NonCPS
 def call(){
     stage('Post'){
         docker.image('ubuntu'){
