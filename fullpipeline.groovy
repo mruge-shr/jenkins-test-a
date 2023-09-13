@@ -1,8 +1,15 @@
 println 'Start Full Pipeline'
-step {
-    agent {
-        docker { image 'alpine' }
+pipeline {
+    stages {
+        stage('inContainerStage'){
+            agent {
+                docker { image 'alpine' }
+            }
+            steps {
+                echo 'In a Container!!!'
+            }
+        }
     }
-    sh 'In a Container!!!'
+
 }
 println 'End Full Pipeline'
