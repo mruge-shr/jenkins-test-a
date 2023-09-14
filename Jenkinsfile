@@ -1,4 +1,3 @@
-def pipeline
 node {
     checkout scm
     println "try docker image"
@@ -7,5 +6,5 @@ node {
         sh 'touch "DoYouSeeMe"'
     }
     println "load file"
-    pipeline = load 'pipeline.groovy'
+    load 'pipeline.groovy'
 }
