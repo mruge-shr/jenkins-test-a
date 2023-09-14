@@ -6,7 +6,7 @@ pipeline {
                 docker { image 'alpine' }
             }
             steps {
-                sh 'pwd; ls -lR ..'
+                sh 'cat /etc/os-release'
             }
         }
     }

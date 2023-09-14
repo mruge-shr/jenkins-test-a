@@ -1,13 +1,17 @@
 template = """
-node('docker') {
-    stage('%s') {
-        agent {
-            docker { image 'alpine' }
-        }
-        step {
-            sh 'I am %s'
+pipeline {
+    agent none
+    stages {
+        stage('Pre'){
+            agent {
+                docker { image 'alpine' }
+            }
+            steps {
+                sh 'echo "hip hip horray"'
+                sh 'cat /etc/os-release'
+            }
         }
     }
 }
 """
-print(template%("One","hello"))
+print(template)

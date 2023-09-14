@@ -1,10 +1,7 @@
 node {
     checkout scm
-    println "try docker image"
-    docker.image('ubuntu').inside {
-        sh 'cat /etc/os-release'
-        sh 'touch "DoYouSeeMe"'
+    docker.image('python:3').inside {
+        sh 'python factory.py > custom.groovy'
     }
-    println "load file"
-    load 'pipeline.groovy'
+    load '../gitPipeline/custom.groovy'
 }
