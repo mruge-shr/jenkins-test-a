@@ -6,7 +6,7 @@ pipeline {
                 docker { image 'alpine' }
             }
             steps {
-                echo 'Planning'
+                sh 'pwd; ls -l'
             }
         }
     }
