@@ -1,6 +1,6 @@
-node {
-    sh 'echo "pipline {}" > mypipeline.groovy' 
+def pipeline
+node('agent') {
+    pipeline = load 'pipeline.groovy'
+    pipeline.functionA()
 }
-pipeline {
-    load 'mypipeline.groovy'
-}
+pipeline.functionB()
