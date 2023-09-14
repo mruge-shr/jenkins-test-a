@@ -1,6 +1,4 @@
 def pipeline
-node('agent') {
+node {
     pipeline = load 'pipeline.groovy'
-    pipeline.functionA()
 }
-pipeline.functionB()
