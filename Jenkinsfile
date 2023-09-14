@@ -1,5 +1,6 @@
 node {
-    sh 'echo "pipline {}" > mypipeline.groovy'
-    
+    sh 'echo "pipline {}" > mypipeline.groovy' 
 }
-load 'mypipeline.groovy'
+pipeline {
+    load 'mypipeline.groovy'
+}
