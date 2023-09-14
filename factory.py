@@ -7,7 +7,14 @@ pipeline {
                 docker { image 'alpine' }
             }
             steps {
-                sh 'echo "hip hip horray"'
+                sh 'cat /etc/os-release'
+            }
+        }
+        stage('Post'){
+            agent {
+                docker { image 'ubuntu' }
+            }
+            steps {
                 sh 'cat /etc/os-release'
             }
         }
